@@ -71,7 +71,7 @@ public class HttpServerCreator {
         httpsServer.setHttpsConfigurator(new HttpsConfigurator(sslContext));
         return httpsServer;
     }
-    //http调用该方法
+    //http调用该方法,创建IP地址为通配符地址，端口号为port的端口地址。
     private static HttpServer createHttpServer(int port) throws Exception {
         HttpServer httpServer = HttpServer.create(new InetSocketAddress(port), 0);
         return httpServer;
