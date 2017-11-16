@@ -63,7 +63,7 @@ public class HttpServerCreator {
         System.out.println("Exit value: " + exec.exitValue());
 
     }
-
+    //https调用该方法
     private static HttpsServer createHttpsServer(int port) throws Exception {
         generateCertificate();
         HttpsServer httpsServer = HttpsServer.create(new InetSocketAddress(port), 0);
@@ -71,7 +71,7 @@ public class HttpServerCreator {
         httpsServer.setHttpsConfigurator(new HttpsConfigurator(sslContext));
         return httpsServer;
     }
-
+    //http调用该方法
     private static HttpServer createHttpServer(int port) throws Exception {
         HttpServer httpServer = HttpServer.create(new InetSocketAddress(port), 0);
         return httpServer;
